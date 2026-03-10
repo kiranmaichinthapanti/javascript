@@ -1,0 +1,22 @@
+main {
+    background-image: url('https://preview.colorlib.com/theme/royal/image/banner_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-container {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    font-size: 12px;
+}
+
+.royal-hotel-navbar {
+    margin-top: -8px;
+}
+
+.header {
+    padding: 10rem 0px;
+}

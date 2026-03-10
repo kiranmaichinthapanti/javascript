@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+            let isCredentialsAreValid = true;
+
+            const loginPromise = new Promise(function(resolve, reject) {
+                if (isCredentialsAreValid) {
+                    setTimeout(function() {
+                        resolve('Credentials are valid');
+                    }, 2000);
+                } else {
+                    reject('Credentials are invalid');
+                }
+            });
+
+            // ES6
+
+            // loginPromise.then(function(response) {
+            //     console.log(response);
+            // }).catch(function(error) {
+            //     console.log(error);
+            // });
+
+            // ES7
+            (async function() {
+                try {
+                    const response = await loginPromise;
+                    console.log(response);
+                } catch(error) {
+                    console.log(error);
+                }
+            })();
+
+        </script>
+        
+    </body>
+</html>

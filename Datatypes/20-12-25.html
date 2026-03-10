@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+       <style>
+            /* Center container */
+            body > div {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            /* Product card */
+            body > div > div > div {
+                display: flex;
+                align-items: flex-start;
+                gap: 15px;              /* 👈 controls gap */
+                width: 1000px;
+                padding: 15px;
+            }
+
+            /* Image container – FIX WIDTH */
+            body > div > div > div > div:first-child {
+                width: 180px;           /* 👈 IMPORTANT */
+                flex-shrink: 0;         /* prevents stretching */
+            }
+
+            /* Image */
+            body > div > div > div > div:first-child img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            /* Details container */
+            body > div > div > div > div:nth-child(2) {
+                flex: 1;
+            }
+
+            /* Price container */
+            body > div > div > div > div:last-child {
+                min-width: 140px;
+                text-align: right;
+            }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                body > div > div > div {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        </style>
+
+
+    </head>
+    <body>
+        
+        <div class="product-card">
+            <div class="product-image">
+                <img src="" alt="Image" id="image-url"/>
+            </div>
+
+            <div class="product-details">
+                <h2 id="name"></h2>
+                <p>
+                    <span id="avg-rating"></span>
+                    <span id="ratings-count"></span> Ratings
+                    <span id="reviews-count"></span> Reviews
+                </p>
+                <ul>
+                    <li id="specification1"></li>
+                    <li id="specification2"></li>
+                    <li id="specification3"></li>
+                    <li id="specification4"></li>
+                    <li id="specification5"></li>
+                </ul>
+            </div>
+
+            <div class="product-price">
+                <h4>
+                    <span id="original-price"></span>
+                    <span id="discount"></span>
+                </h4>
+                <button onclick="viewDiscountedPrice()">View Discounted Price</button>
+                <h4 id="discounted-price"></h4>
+            </div>
+        </div>
+
+
+        <script>
+
+            // Array of objects
+            var users = [
+                {
+                    id: 1,
+                    name: 'varun',
+                    email: 'varun@gmail.com',
+                    password: 'varun@123'
+                },
+                {
+                    id: 2,
+                    name: 'ganesh',
+                    email: 'ganesh@gmail.com',
+                    password: 'varun@123'
+                },
+                {
+                    id: 3,
+                    name: 'charan',
+                    email: 'charan@gmail.com',
+                    password: 'charan@123'
+                }
+            ];
+
+            console.log(users[1].email);
+
+            var products = [
+                {
+                    id: 1,
+                    name: 'realme P4x 5G (Matte Silver, 128 GB)  (6 GB RAM)',
+                    imageUrl: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/z/9/n/-original-imahgdr4shzrvcfh.jpeg?q=70',
+                    avgRating: 4.4,
+                    ratingCount: 2031,
+                    reviewCount: 227,
+                    price: 15999,
+                    discount: 11,
+                    specifications:[
+                        '6 GB RAM | 128 GB ROM',
+                        '17.07 cm (6.72 inch) Full HD+ Display',
+                        '50MP + 2MP | 8MP Front Camera',
+                        '7000 mAh Battery',
+                        'Dimensity 7400 Ultra Processor'
+                    ]
+                },
+                {
+                    id: 2,
+                    name: 'Samsung Galaxy A35 5G (Awesome Lilac, 128 GB)  (8 GB RAM)',
+                    imageUrl: 'https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/2/s/8/-original-imahgy26fu3z2hez.jpeg?q=70',
+                    avgRating: 4.4,
+                    ratingCount: 64010,
+                    reviewCount: 3707 ,
+                    price: 18999,
+                    discount: 44,
+                    specifications:[
+                        '8 GB RAM | 128 GB ROM | Expandable Upto 1 TB',
+                        '16.76 cm (6.6 inch) Full HD+ Display',
+                        '50MP + 8MP + 5MP | 13MP Front Camera',
+                        '5000 mAh Battery',
+                        'Samsung Exynos 1380 Processor'
+                    ]
+                }
+            ];
+            
+            document.getElementById('name').innerHTML = products[0].name;
+            document.getElementById('image-url').src = products[0].imageUrl;
+            document.getElementById('avg-rating').innerHTML = products[0].avgRating;
+            document.getElementById('ratings-count').innerHTML = products[0].ratingCount;
+            document.getElementById('reviews-count').innerHTML = products[0].reviewCount;
+            document.getElementById('original-price').innerHTML = products[0].price;
+            document.getElementById('discount').innerHTML = products[0].discount + '% off';   
+            
+            document.getElementById('specification1').innerHTML = products[0].specifications[0];
+            document.getElementById('specification2').innerHTML = products[0].specifications[1];
+            document.getElementById('specification3').innerHTML = products[0].specifications[2];
+            document.getElementById('specification4').innerHTML = products[0].specifications[3];
+            document.getElementById('specification5').innerHTML = products[0].specifications[4];
+            
+
+            function viewDiscountedPrice() {
+                var discountedPriceH4 = document.getElementById('discounted-price');
+
+                var discountedPrice = products[0].price - (products[0].price * products[0].discount / 100);
+
+                discountedPriceH4.innerHTML = discountedPrice;
+            }
+        </script>
+        
+    </body>
+</html>

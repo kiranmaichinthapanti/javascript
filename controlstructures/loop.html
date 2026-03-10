@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div id="paras">
+
+            <p>A PDF -> chunks -> embeddings -> vector DB pipeline</p>
+
+            <p>A PDF -> chunks -> embeddings -> vector DB pipeline</p>
+
+            <p>A PDF -> chunks -> embeddings -> vector DB pipeline</p>
+
+            <p>A PDF -> chunks -> embeddings -> vector DB pipeline</p>
+
+        </div>
+
+        <button onclick="deleteAllElements()">Delete All</button>
+
+        <div id="technologies">
+
+        </div>
+
+        <div id="tools">
+
+        </div>
+
+        <script>
+
+            var i = 0;
+
+            while(i < 5) {
+                console.log("iteration", i + 1);
+                i++;
+            }
+
+           function deleteAllElements() {
+                var el = document.getElementById('paras');
+
+                while(el.firstChild) {
+                    el.removeChild(el.lastChild);
+                }
+           }
+
+           var j = 0;
+
+           do {
+                console.log("In do while loop");
+           } while(j !== 0);
+
+           do {
+                console.log('Iteration', j + 1);
+                j++;
+           } while(j < 5);
+
+           for( var k = 0; k < 5; k++){
+                console.log("Iteration", k+1);
+           }
+
+           var fullStackJSTech = [
+                "HTML5",
+                "CSS3",
+                "JavaScript (ES6+)",
+                "TypeScript",
+                "React.js",
+                "Next.js",
+                "Redux",
+                "Tailwind CSS",
+                "Bootstrap"
+           ];
+
+           console.log(fullStackJSTech);
+
+           for ( var i = 0; i < fullStackJSTech.length; i++){
+                console.log("Techonology: ",fullStackJSTech[i]);
+           }
+
+           for ( var i = fullStackJSTech.length - 1; i >= 0 ; i--){
+                console.log("Technology: ",fullStackJSTech[i]);
+           }
+
+           var technologiesDiv = document.getElementById('technologies');
+
+           var technologiesStr = '';
+
+           for (var i = 0; i < fullStackJSTech.length; i++) {
+                technologiesStr = technologiesStr + '<p>' + fullStackJSTech[i] + '</p>';
+           }
+
+           technologiesDiv.innerHTML = technologiesStr;
+
+           var tools = [
+                "Git",
+                "GitHub",
+                "Docker",
+                "Kubernetes",
+                "Jenkins",
+                "AWS",
+                "Azure",
+                "Ansible"
+           ];
+
+           var toolsDiv = document.getElementById('tools');
+
+           var toolsStr = '';
+
+           for (var i = 0; i < tools.length; i++) {
+                toolsStr = toolsStr + "<h2>" + tools[i] + "</h2>";
+           }
+
+           console.log(toolsStr);
+
+           toolsDiv.innerHTML = toolsStr;
+
+        </script>
+    </body>
+</html>

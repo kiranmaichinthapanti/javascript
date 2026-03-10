@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+         <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(120deg, #89f7fe, #66a6ff);
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div {
+                background: white;
+                padding: 25px;
+                width: 300px;
+                border-radius: 8px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            button {
+                width: 100%;
+                margin-top: 15px;
+                padding: 10px;
+                background-color: #66a6ff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            button:hover {
+                background-color: #4d8cf0;
+            }
+
+            h3 {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            #result {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>LOGIN</h2>
+            <label>email:</label>
+            <input type="text" placeholder="Enter email Id" id="email"/>
+            <label>password:</label>
+            <input type="password" placeholder="Enter password" id="password"/>
+            <button onclick="login()">submit</button>
+
+            <h3>result: <span id="result"></span></h3>
+        </div>
+
+        <script>
+            function login() {
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+
+                var users = [
+                    {
+                        name: "Rahul Sharma",
+                        email: "rahul.sharma@gmail.com",
+                        mobile: "98732111233",
+                        password: "Rahul@1233"
+                    },
+                    {
+                        name: "Ramya",
+                        email: "ramya@gmail.com",
+                        mobile: "9873223340",
+                        password: "ramya@1233"
+                    },
+                    {
+                        name: "Virat",
+                        email: "virat@gmail.com",
+                        mobile: "907321112348",
+                        password: "virat@123"
+                    }
+                ];
+
+                if ((email === users[0].email && password === users[0].password) || (email === users[1].email && password === users[1].password) || (email === users[2].email && password === users[2].password)){
+                    document.getElementById("result").innerHTML = "Logged in successfully";
+                } else {
+                    document.getElementById("result").innerHTML = "invalid credentials";  
+                }   
+            }
+        </script>
+        
+    </body>
+</html>

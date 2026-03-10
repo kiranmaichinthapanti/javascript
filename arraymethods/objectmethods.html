@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+            var employee = {
+                id: 101,
+                name: "Kiranmai",
+                age: 26,
+                department: "Engineering",
+                position: "Software Developer",
+                salary: 750000,
+                isPermanent: true,
+                skills: ["HTML","CSS","JavaScript","React","Git"]
+            };
+
+            // console.log(employee.position);
+
+            var employeeKeys = Object.keys(employee);
+
+            console.log(employeeKeys);
+
+            var employeeValues = Object.values(employee);
+
+            console.log(employeeValues);
+
+            var employeeEntries = Object.entries(employee);
+
+            console.log(employeeEntries);
+
+            var zoomMeeting = {
+                id: "Z123456789",
+                topic: "Project Discussion",
+                hostName: "Kiranmai",
+                meetingId: "886-4582-0744",
+                passcode: "123456",
+                startTime: "2026-01-01T10:00:00",
+                duration: 60,
+                timezone: "IST",
+                joinUrl: "https://zoom.us/j/88645820744",
+                isRecurring: false
+            };
+
+            var freezedZoomMeeting = Object.freeze(zoomMeeting);
+
+            freezedZoomMeeting.meetingId = '678-456-123';
+
+            freezedZoomMeeting.id = 89;
+
+            console.log(freezedZoomMeeting);
+
+            var str = new String("Here is a clean employee object generated exactly with the employee fields you mentioned employee");
+
+            console.log(str);
+
+            console.log(str.length);
+
+            console.log("index", str.indexOf("employee"));
+
+            console.log("Last Index", str.lastIndexOf("employee"));
+
+            console.log("Sub String", str.slice(10,17));
+
+            console.log("Sub string", str.substr(10,4));
+
+            var companyName = "Digital Edify";
+
+            console.log(companyName.toUpperCase());
+
+            console.log(companyName.toLowerCase());
+
+            var firstName = "Sana";
+
+            var lastName = "Patel";
+
+            var fullName = firstName.concat(' ',lastName);
+
+            console.log("Full name : ", fullName);
+
+            console.log(firstName.charAt(2));
+            
+        </script>
+        
+    </body>
+</html>

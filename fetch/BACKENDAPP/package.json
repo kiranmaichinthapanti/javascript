@@ -1,0 +1,14 @@
+{
+  "name": "backend-app",
+  "version": "1.0.0",
+  "description": "Dummy backend API using JSON Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "json-server": "^0.17.4",
+    "json-server-auth": "^2.1.0"
+  }
+}

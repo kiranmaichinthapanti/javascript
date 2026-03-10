@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <label>Number1: </label>
+            <input type="text" placeholder="Enter Number1" id="num1"/>
+        </div>
+
+        <div>
+            <label>Number2: </label>
+            <input type="text" placeholder="Enter Number2" id="num2"/>
+        </div>
+
+        <button onclick="addTwoNumbers()">Add</button>
+
+        <button onclick="subtractTwoNumbers()">Subtract</button>
+
+        <button onclick="multiply()">Multiply</button>
+
+        <button onclick="division()">Division</button>
+
+        <h4>Result: <span id="result"></span></h4>
+
+        <div>
+            <Label>City</Label>
+            <select onchange="onChangeCity()" id="city">
+                <option>Hyderabad</option>
+                <option>Pune</option>
+                <option>Chennai</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Search Query: </label>
+            <input id="search-query" placeholder="Search here...." onkeyup="onSearchQuery()"/v >
+        </div>
+
+        <p onmouseover="showMsg()">Hover over me</p>
+
+        <p 
+            onmouseover="changeColorRed()" 
+            onmouseout="changeColorBlack()" 
+            id="text">
+                Hover over this text
+        </p>
+
+        
+        <script>
+            function sum(num1,num2){
+                var result = num1+num2;
+                console.log(result);
+                return result;
+            }
+
+            sum(10,20);
+
+            function addTwoNumbers(){
+                var num1 = document.getElementById('num1').value;
+                var num2 = document.getElementById('num2').value;
+
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+
+                var result = num1 + num2;
+                document.getElementById('result').innerHTML = result;
+            }
+
+            function subtractTwoNumbers(){
+                var num1 = document.getElementById('num1').value;
+                var num2 = document.getElementById('num2').value;
+
+                // console.log(num1,num2);
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+
+                var result = num1 - num2;
+                document.getElementById('result').innerHTML = result;
+            }
+
+            function multiply(){
+                var num1 = document.getElementById('num1').value;
+                var num2 = document.getElementById('num2').value;
+
+                // console.log(num1,num2);
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+
+                var result = num1 * num2;
+                document.getElementById('result').innerHTML = result;
+            }
+
+            function division(){
+                var num1 = document.getElementById('num1').value;
+                var num2 = document.getElementById('num2').value;
+
+                // console.log(num1,num2);
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+
+                var result = num1 / num2;
+                document.getElementById('result').innerHTML = result;
+            }
+
+            function onChangeCity(){
+                var selectedCity = document.getElementById('city').value;
+
+                console.log("Selected City :", selectedCity);
+            }
+
+            function onSearchQuery(){
+                var searchQuery = document.getElementById('search-query').value;
+
+                console.log('Search Query: ', searchQuery);
+            }
+
+            function showMsg() {
+                console.log("Mouse is over the element");
+            }
+
+            function changeColorRed() {
+                document.getElementById('text').style.color = 'red';
+            }
+
+            function changeColorBlack() {
+                document.getElementById('text').style.color = 'blue';
+            }
+
+        </script>
+        
+    </body>
+</html>

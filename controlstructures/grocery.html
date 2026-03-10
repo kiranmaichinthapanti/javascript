@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        /* Flex container for side by side layout */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* space between cards */
+        }
+
+        .product-card {
+            width: 220px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 12px;
+            flex-shrink: 0; /* prevent shrinking */
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .product-image {
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Quantity selector */
+        .quantity-selector {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: #fff;
+            border: 2px solid #ff2f6e;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 8px;
+            font-weight: bold;
+        }
+
+        .quantity-selector .btn {
+            cursor: pointer;
+            color: #ff2f6e;
+            user-select: none;
+        }
+
+        /* Price row */
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .current-price-badge {
+            background: #2e7d32;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .original-price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 13px;
+        }
+
+        .offer-text {
+            color: #2e7d32;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+
+        .product-title {
+            font-size: 15px;
+            margin: 8px 0 2px;
+        }
+
+        .product-weight {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .delivery-time {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .bolt-icon {
+            color: #ffc107;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <div class="products-container" id="products"></div>
+
+        <script>
+            var groceries = [
+                {
+                    id: 1,
+                    name: "Chilli Green",
+                    price: 21,
+                    mrp: 26,
+                    discount: 5,
+                    weight: "100 g",
+                    image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,q-40,dpr-2/cms/product_variant/831b1429-cec1-4178-811c-3fa88bf689f1.jpeg",
+                },
+                {
+                    id: 2,
+                    name: "Spinach (Palak) - Cleaned, without roots",
+                    price: 20,
+                    mrp: 33,
+                    discount: 13,
+                    weight: "1 pack (250 g)",
+                    image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,q-40,dpr-2/cms/product_variant/267ab85f-24b7-4702-b304-4cb1d81e9bd2.jpeg",
+                },
+                {
+                    id: 3,
+                    name: "Fresh Potato",
+                    price: 30,
+                    mrp: 50,
+                    discount: 20,
+                    weight: "1 pack (900 g - 1 kg)",
+                    image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,q-40,dpr-2/cms/product_variant/c4286d3c-8773-4dce-8b47-341a5d394978.png",
+                    category: "Vegetables",
+                    inStock: true
+                },
+                {
+                    id: 4,
+                    name: "Fresh Onion",
+                    price: 37,
+                    mrp: 60,
+                    discount: 23,
+                    weight: "1 pack (900 - 1000 g)",
+                    image: "https://cdn.zeptonow.com/production/tr:w-403,ar-1024-1024,pr-true,f-auto,q-40,dpr-2/cms/product_variant/1e55d6e9-6958-40d3-ac15-1b63fc49e248.jpeg",
+                    category: "Vegetables",
+                    inStock: true
+                },
+                {
+                    id: 5,
+                    name: "Coccinia",
+                    price: 20,
+                    mrp: 27,
+                    discount: 7,
+                    weight: "250 g",
+                    image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,q-40,dpr-2/cms/product_variant/861d72e4-8ff2-4e82-8990-98f4860c5198.jpeg",
+                    category: "Vegetables",
+                    inStock: true
+                },
+                {
+                    id: 6,
+                    name: "Radish White (Mooli)",
+                    price: 9,
+                    mrp: 18,
+                    discount: 9,
+                    weight: "250 g",
+                    image: "https://cdn.zeptonow.com/production/tr:w-403,ar-3000-3000,pr-true,f-auto,q-40,dpr-2/cms/product_variant/ae3b483a-66ab-424b-b7d5-3f4171244840.jpeg",
+                    category: "Vegetables",
+                    inStock: true
+                }
+                                
+            ];
+
+            var container = document.getElementById('products');
+
+            groceries.forEach(function(grocery) {
+                container.innerHTML += `
+                    <div class="product-card">
+                        <div class="image-container">
+                            <img src="${grocery.image}" alt="${grocery.name}" class="product-image" />
+                            <div class="quantity-selector">
+                                <span class="btn">−</span>
+                                <span>1</span>
+                                <span class="btn">+</span>
+                            </div>
+                        </div>
+
+                        <div class="price-row">
+                            <div class="current-price-badge">₹${grocery.price}</div>
+                            <span class="original-price">₹${grocery.mrp}</span>
+                        </div>
+
+                        <div class="offer-text">₹${grocery.discount} OFF</div>
+
+                        <h3 class="product-title">${grocery.name}</h3>
+                        <div class="product-weight">${grocery.weight}</div>
+
+                        <div class="delivery-time">
+                            <span class="bolt-icon">⚡</span> 10 mins
+                        </div>
+                    </div>
+                `;
+            });
+        </script>
+
+    </body>
+</html>

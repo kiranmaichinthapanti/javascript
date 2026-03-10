@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+            var dateObj = new Date();
+
+            console.log(dateObj);
+
+            console.log(dateObj.toISOString());
+
+            var dateStr = "2026-01-02T10:21:40.538Z";
+
+            var dateObj = new Date(dateStr);
+
+            dateObj.setMonth(3);
+
+            dateObj.setDate(14);
+
+            console.log(dateObj.getDate());
+
+            console.log(dateObj.getMonth()+1);
+
+            console.log(dateObj.getFullYear());
+
+            console.log(dateObj.getHours());
+
+            console.log(dateObj.getMinutes());
+
+            console.log(dateObj.getSeconds());
+
+            var days = ['Sun','Mon','Tue','Wed','Thur','Fri','Sat'];
+
+            console.log(days[dateObj.getDay()]);
+
+            var months =['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+            console.log(months[dateObj.getMonth()]);
+
+            var formattedDate = `${dateObj.getDate()}/${dateObj.getMonth() + 1}/${dateObj.getFullYear()} - ${days[dateObj.getDay()]}`;
+
+            console.log(formattedDate);
+            
+        </script>
+        
+    </body>
+</html>

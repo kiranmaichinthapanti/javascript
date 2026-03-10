@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: gray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .tax-box {
+                background: #ffffff;
+                padding: 25px 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                width: 320px;
+                text-align: center;
+            }
+
+            label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 16px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+                background: #007bff;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: #0056b3;
+            }
+
+            h3 {
+                margin-top: 20px;
+                color: #333;
+            }
+
+            #tax {
+                color: green;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <label>Income: </label>
+            <input type="text" placeholder="Enter Income" id="income"/>
+            <button onclick="calculateTax()">Calculate Tax</button>
+            <h3>Tax: <span id="tax"></span></h3>
+        </div>
+
+        <script>
+
+            // if
+
+            var isLoggedIn = false;
+
+            if(isLoggedIn) {
+                console.log("Show dashboard page");
+            }
+
+            var cartValue = 1000;
+
+            if (cartValue > 1000) {
+                console.log("Show 10% discount banner");
+            }
+
+            // Age validations to vote
+
+            var age = 26;
+
+            if (age >= 18) {
+                console.log("You are eligible to vote");
+            } else {
+                console.log("You are not eligible to vote");
+            }
+
+            // Stock availability
+
+            var productStock = 0;
+
+            if (productStock > 0) {
+                console.log("Product available");
+            } else {
+                console.log("Out of Stock");
+            }
+
+            // Based on marks we want to assign grade to student
+
+            var marks = 40;
+            var assignedGrade;
+
+            if (marks >= 90) {
+                assignedGrade = 'A';
+            } else if (marks >= 75) {
+                assignedGrade = 'B';
+            } else if (marks >= 60) {
+                assignedGrade = 'C';
+            } else if (marks >= 40) {
+                assignedGrade = 'D';
+            } else {
+                assignedGrade = 'fail';
+            }
+
+            console.log("Assigned Grade: ", assignedGrade);
+
+            function calculateTax(){
+                 var income = parseInt(document.getElementById('income').value);
+
+                var tax = 0;
+
+                if (income <= 250000) {
+                    tax = 0;
+                } else if (income <= 500000) {
+                    tax = (income - 250000) * 0.05;
+                } else if (income <= 1000000) {
+                    tax = (income - 250000) * 0.05 + (income - 500000) * 0.20;
+                } else {
+                    tax = (income - 250000) * 0.05 + (income - 500000) * 0.20 + (income - 1000000) * 0.30;
+                }
+
+                document.getElementById('tax').innerHTML = tax;
+            }
+        
+            // Customer Support Ticket Priority
+
+            var priority = 'very high';
+
+            // if (priority === 'low') {
+            //     console.log("Respond within 48 hours");
+            // } else if (priority === 'medium') {
+            //     console.log("Respond within 24 hours");
+            // } else {
+            //     console.log("Immediate response");
+            // }
+
+            switch(priority) {
+                case 'low': {
+                    console.log("Respond within 48 hours");
+                    break;
+                } case 'medium': {
+                    console.log("Respond within 24 hours");
+                    break;
+                } case 'high': {
+                    console.log("Immediate response");
+                    break;
+                } default: {
+                    console.log("Invalid priority");
+                }
+            }
+
+            var status = 'SHIPPED';
+
+            switch(status) {
+                case 'PLACED': {
+                    console.log("Order placed successfully");
+                    break;
+                } case 'SHIPPED': {
+                    console.log("Your order is on the way");
+                    break;
+                } case 'DELIVERED': {
+                    console.log("Order is delivered");
+                    break;
+                } case 'CANCELLED': {
+                    console.log("Order is cancelled");
+                    break;
+                } default: {
+                    console.log("Invalid order status")
+                }
+            }
+
+            var status = "";
+
+            if (status === "PLACED"){
+                console.log("Your order placed successfully");
+            } else if (status === "SHIPPED") {
+                console.log("Your order is on the way");
+            } else if (status === "DELIVERED") {
+                console.log("Order is delivered");
+            } else if (status === "CANCELLED") {
+                console.log("Order is cancelled");
+            } else {
+                console.log("Invalid order status");
+            }
+
+        </script>
+        
+    </body>
+</html>

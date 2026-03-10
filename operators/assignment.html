@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+            var marks = [70,34,20,90];
+
+            var sum = 0;
+
+            sum += marks[0];  // sum = sum + marks[0];
+
+            sum += marks[1]; //sum = sum + marks[1];
+
+            sum += marks[2]; //sum = sum + marks[2];
+
+            sum += marks[3]; //sum = sum + marks[3];
+
+            console.log("Total marks: ", sum);
+
+            var email = 'bharathk@gmail.com';
+
+            var dbEmail = 'bharathk@gmail.com';
+
+            var isEmailsMatching = email == dbEmail;
+
+            console.log("Is Emails Matching: ", isEmailsMatching);
+
+            var currentBalance = 4040;
+
+            var dbCurrentBalance = '4000';
+
+            var isCurrentBalanceMatching = currentBalance !== dbCurrentBalance;
+
+            console.log("Is current balance matching: ", isCurrentBalanceMatching);
+
+            var password = 'test@!23';
+
+            var dbPassword = 'test@!23';
+
+            var isPasswordNotMatching = password != dbPassword;
+
+            console.log('Is Password Not Matching:', isPasswordNotMatching);
+
+            var isUserRegistered = true;
+
+            var status = isUserRegistered === true ? 'User is registered' : 'User is not registered';
+
+            console.log(status);
+
+            var user = {
+                name: "Nishith",
+                email: "nishith@gmail.com",
+                password: "Secure@123",
+                mobile: "984311309"
+            };
+
+            var email = "nishith@example.com";
+            var password = 'Secure@123';
+            var mobile = "123489070"
+
+            var isCredentialsMatching = ( email === user.email) && (pasword === user.password);
+
+            console.log("Is Credentials Matching: ", isCredentialsMatching);
+
+            var isEmailOrMobileMatching = (email === user.email) || (mobile === user.mobile);
+
+            console.log("Is Email or Mobile Matching: ", isEmailOrMobileMatching);
+
+            var isUserActive = false;
+
+            isUserActive = !isUserActive;
+
+            console.log(isUserActive)
+        </script>
+        
+    </body>
+</html>

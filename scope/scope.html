@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            //global scope
+            var name = 'kiranmai';
+            console.log(name);
+
+            //local or function scope
+            function getFullName(){
+                var firstName = 'Sairaj';
+                console.log(firstName);
+
+            }
+            getFullName();
+
+            console.log(name);
+
+            let companyName = 'Digital Edify';
+            
+            companyName = 'Digital Lync';
+
+            console.log(companyName);
+            
+            for (let i = 0; i < 5; i++) {
+                console.log("Iteration: ", i);
+            }
+
+            // console.log(i);
+
+            if (10 === 10) {
+                let city = 'Hyderabad';
+                console.log(city);
+            }
+
+            // console.log(city);
+
+            const employee = {
+                name: 'karthik',
+                designation: 'Software Engineer',
+                getDesignation: function() {
+                    return this.designation;
+                }
+            };
+            console.log(employee.getDesignation());
+
+            var getDesignation = function(){
+
+            };
+
+            console.log(window.getDesignation);
+
+        </script>
+        
+    </body>
+</html>

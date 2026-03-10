@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div id="container">
+
+        </div>
+        
+        <script>
+            const carNames = [
+                "Toyota Innova",
+                "Hyundai Creta",
+                "Tata Nexon",
+                "Maruti Suzuki Baleno",
+                "Mahindra XUV700",
+                "Honda City",
+                "Kia Seltos",
+                "Skoda Slavia",
+                "Volkswagen Virtus",
+                "MG Hector"
+                ];
+
+            const para = document.createElement('p');
+
+            para.innerHTML = 'Volkswagen Virtus';
+
+            console.log(para);
+
+            document.getElementById('container').appendChild(para);
+        </script>
+        
+    </body>
+</html>

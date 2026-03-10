@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Car</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f2f2f2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .form-container{
+                background: #fff;
+                width: 380px;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            }
+
+            h2{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .form-group{
+                margin-bottom: 15px;
+            }
+
+            label{
+                display: block;
+                margin-bottom: 6px;
+                font-weight: bold;
+            }
+
+            input{
+                width: 100%;
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+            }
+
+            .btn-group{
+                display: flex;
+                gap: 10px;
+                margin-top: 20px;
+            }
+
+            button{
+                flex: 1;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 6px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .update-btn{
+                background-color: #007bff;
+                color: #fff;
+            }
+
+            .update-btn:hover{
+                background-color: #0056b3;
+            }
+
+            .cancel-btn{
+                background-color: #6c757d;
+                color: #fff;
+            }
+
+            .cancel-btn:hover{
+                background-color: #5a6268;
+            }
+            #previewImg{
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-top: 10px;
+                border: 1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="form-container">
+        <h2>Add Car</h2>
+
+        <form id="addCarForm">
+            <div class="form-group">
+                <label>Brand</label>
+                <input type="text" id="brand">
+            </div>
+
+            <div class="form-group">
+                <label>Model</label>
+                <input type="text" id="model">
+            </div>
+
+            <div class="form-group">
+                <label>Year</label>
+                <input type="number" id="year">
+            </div>
+
+            <div class="form-group">
+                <label>Price</label>
+                <input type="text" id="price">
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="url" id="image" name="image">
+            </div>
+
+            <div class="btn-group">
+                <button class="update-btn" >Add</button>
+                <button class="cancel-btn" onclick="goBack()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+     
+        document.getElementById('addCarForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            
+            let requestBody = {
+                brand: document.getElementById('brand').value,
+                model: document.getElementById('model').value,
+                year: document.getElementById('year').value,
+                price: document.getElementById('price').value,
+                image: document.getElementById('image').value
+            };
+
+            requestBody = JSON.stringify(requestBody);
+
+            try {
+                const response = await fetch('http://localhost:3000/cars/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: requestBody
+                });
+                const paresedResponse = await response.json();
+                window.alert('Added successfully');
+                window.location.href = 'listCarDetails.html';
+            } catch(error) {
+                
+            }
+            
+        });
+    </script>
+
+    </body>
+</html>

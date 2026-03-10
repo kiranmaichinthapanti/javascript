@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Employee</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #f4f6f8;
+            }
+
+            .container {
+                width: 420px;
+                margin: 60px auto;
+                background-color: #ffffff;
+                padding: 25px;
+                border-radius: 8px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            form label {
+                display: block;
+                margin-top: 12px;
+                font-weight: bold;
+                color: #444;
+            }
+
+            form input,
+            form select {
+                width: 100%;
+                padding: 8px 10px;
+                margin-top: 6px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+                box-sizing: border-box;
+            }
+
+            form input:focus,
+            form select:focus {
+                outline: none;
+                border-color: #0d6efd;
+                box-shadow: 0 0 3px rgba(13, 110, 253, 0.5);
+            }
+
+            button {
+                width: 100%;
+                margin-top: 20px;
+                padding: 10px;
+                background-color: #0d6efd;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #084cdf;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>Add Employee</h2>
+
+            <form id="editForm">
+                <label>ID</label>
+                <input type="text" id="id">
+            
+                <lable>Name</lable>
+                <input type="text" id="name">
+
+                <lable>Department</lable>
+                <input type="text" id="department">
+
+                <lable>Salary</lable>
+                <input type="number" id="salary">
+
+                <label>Is Permanent</label>
+                <select id="isPermanent">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+
+                <button type="submit">Add Employee</button>
+            </form>
+
+            <script>
+                
+
+                document.getElementById('editForm').addEventListener('submit', async function(event){
+                    event.preventDefault();
+
+                    let requestBody = {
+                        name: document.getElementById('name').value,
+                        department: document.getElementById('department').value,
+                        salary: document.getElementById('salary').value,
+                        isPermanent: document.getElementById('isPermanent').value
+                    };
+
+                    requestBody = JSON.stringify(requestBody);
+
+                    try {
+                        const response = await fetch("http://localhost:3000/employees/", {
+                            method:'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: requestBody
+                        });
+                        const paresedResponse = await response.json();
+                        window.alert('Added Successfully');
+                        window.location.href = 'listEmployeeDetails.html';
+                    }catch(error){
+
+                    }
+                });
+            </script>
+        </div>
+        
+    </body>
+</html>

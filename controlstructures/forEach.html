@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div id="customer-tickets">
+            <div>
+                <p>Rahul Sharma</p>
+                <p>Unable to login to the application</p>
+            </div>
+            <div>
+                <p>Anita Verma</p>
+                <p>Payment failed but amount deducted</p>
+            </div>
+            <div>
+                <p>Kiranmai Ch</p>
+                <p>Password reset email not received</p>
+            </div>
+            <div>
+                <p>Suresh Reddy</p>
+                <p>Application loading very slowly</p>
+            </div>
+        </div>
+
+        <script>
+            var customerTickets = [
+                {
+                    ticketId: "TCKT-1001",
+                    customerName: "Rahul Sharma",
+                    email: "rahul.sharma@example.com",
+                    issue: "Unable to login to the application",
+                    priority: "High",
+                    status: "Open",
+                    createdAt: "2025-09-01T10:15:00Z",
+                    assignedTo: "Support Team A"
+                },
+                {
+                    ticketId: "TCKT-1002",
+                    customerName: "Anita Verma",
+                    email: "anita.verma@example.com",
+                    issue: "Payment failed but amount deducted",
+                    priority: "Critical",
+                    status: "In Progress",
+                    createdAt: "2025-09-02T14:30:00Z",
+                    assignedTo: "Finance Support"
+                },
+                {
+                    ticketId: "TCKT-1003",
+                    customerName: "Kiranmai Ch",
+                    email: "kiranmai.ch@example.com",
+                    issue: "Password reset email not received",
+                    priority: "Medium",
+                    status: "Open",
+                    createdAt: "2025-09-03T09:45:00Z",
+                    assignedTo: "Auth Support Team"
+                },
+                {
+                    ticketId: "TCKT-1004",
+                    customerName: "Suresh Reddy",
+                    email: "suresh.reddy@example.com",
+                    issue: "Application loading very slowly",
+                    priority: "Low",
+                    status: "Resolved",
+                    createdAt: "2025-09-04T16:10:00Z",
+                    assignedTo: "Performance Team"
+                }
+            ];
+
+            // for (var i = 0; i < customerTickets.length; i++) {
+            //     console.log(customerTickets[i]);
+            // }
+
+            customerTickets.forEach(function(ticket, index) {
+                console.log(ticket, index);
+            });
+
+            var employee = {
+                employeeId: "EMP-1023",
+                firstName: "Kiranmai",
+                lastName: "Chinthapanti",
+                email: "kiranmai.chinthapanti@company.com",
+                role: "DevOps Engineer",
+                department: "Engineering",
+                skills: ["Docker", "Kubernetes", "AWS", "Linux"],
+                experienceYears: 3,
+                isActive: true,
+                joiningDate: "2022-06-15",
+                managerName: "Suresh Reddy",
+                location: "Hyderabad"
+            };
+
+            for (var key in employee) {
+                console.log(key, employee[key]);
+            }
+
+            var customerTicketsStr = '';
+
+            customerTickets.forEach(function(ticket,indes) {
+                // customerTicketsStr = customerTicketsStr + "<div><p>"+ ticket.customerName + "</p><p>" + ticket.issue +"</p></div>";
+                customerTicketsStr += `
+                    <div>
+                        <p>${ticket.customerName}</p>
+                        <p>${ticket.issue}</p>
+                    </div>
+                `;
+            });
+
+            // console.log(customerTicketsStr);
+            document.getElementById('customer-tickets').innerHTML = customerTicketsStr;
+
+            var address = {
+                addressId: "ADDR-501",
+                street: "12-45/3, MG Road",
+                area: "Ameerpet",
+                city: "Hyderabad",
+                state: "Telangana",
+                postalCode: "500016"
+            };
+
+            // 12-45/3, MG Road, Ameerpet, Hyderabad, Telangana, 500016
+
+            var addressStr = address.street + ', '+ address.area + ', ' + address.city + ', ' + address.state + ', ' + address['postalCode'];
+
+            console.log(addressStr);
+
+            var addressStr2 = `${address.street}, ${address.area}, ${address.city}, ${address.state}, ${address.postalCode}`;
+
+            console.log(addressStr2);
+        </script>
+        
+    </body>
+</html>

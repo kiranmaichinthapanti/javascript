@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employees-tbody">
+                  
+                </tbody>
+            </table>
+        </div>
+        <script>
+            const employees = [
+                {
+                    id: 1,
+                    name: "Rahul Sharma",
+                    email: "rahul.sharma@company.com",
+                    department: "IT",
+                    salary: 650000
+                },
+                {
+                    id: 2,
+                    name: "Anita Verma",
+                    email: "anita.verma@company.com",
+                    department: "HR",
+                    salary: 720000
+                },
+                {
+                    id: 3,
+                    name: "Suresh Reddy",
+                    email: "suresh.reddy@company.com",
+                    department: "Finance",
+                    salary: 480000
+                },
+                {
+                    id: 4,
+                    name: "Priya Nair",
+                    email: "priya.nair@company.com",
+                    department: "Marketing",
+                    salary: 600000
+                },
+                {
+                    id: 5,
+                    name: "Amit Patel",
+                    email: "amit.patel@company.com",
+                    department: "Operations",
+                    salary: 850000
+                }
+                ];
+
+                const employeesTbody = document.getElementById('employees-tbody');
+
+                employees.forEach(function(employee) {
+                    const tr = document.createElement('tr');
+
+                    //Name
+                    // const nameTD = document.createElement('td');
+                    // nameTD.innerHTML = employee.name;
+                    // tr.appendChild(nameTD);
+
+                    // //Email
+                    // const emailTD = document.createElement('td');
+                    // emailTD.innerHTML = employee.email;
+                    // tr.appendChild(emailTD);
+
+                    
+                    // //Department
+                    // const departmentTD = document.createElement('td');
+                    // departmentTD.innerHTML = employee.department;
+                    // tr.appendChild(departmentTD);
+
+                    
+                    // //Salary
+                    // const salaryTD = document.createElement('td');
+                    // salaryTD.innerHTML = employee.salary;
+                    // tr.appendChild(salaryTD);
+
+                    for (let key in employee) {
+                        if (key !== 'id') {
+                            const td = document.createElement('td');
+                            td.innerHTML = employee[key];
+                            tr.appendChild(td);
+                        }
+                    }
+
+                    const td = document.createElement('td');
+                    const button = document.createElement('button');
+                    button.innerHTML = 'Delete';
+                    button.addEventListener('click', function() {
+                        console.log('In delete function');
+                    });
+            
+                    td.appendChild(button);
+                    tr.appendChild(td);
+
+                    button.addEventListener
+
+                    employeesTbody.appendChild(tr);
+                })
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+            var fullName = 'Abhilash Datla';
+
+            var email = 'abhilash.datla@gmail.com';
+
+            var isUserLoggedIn = true;
+
+            var address = 'Digital Edify, 2nd Floor, Madhapur, Hyderabad, 500001';
+
+            console.log(address);
+
+            console.log(email);
+
+            email = 'abhilash.datla@digitaledify.ai';
+
+            console.log(email);
+
+            var isActive;
+
+            console.log(isActive);
+
+            var name = 'kiranmai';
+            
+            console.log(typeof name);
+
+            var boolean = true;
+
+            console.log(typeof boolean);
+
+            var currentBankBalance = 9008.20;
+
+            console.log(typeof currentBankBalance);
+
+            var participants = ['Kiran','Abhi','Puppy','Chikki'];
+
+            console.log(participants[2]);
+
+            var productInfo = [80, 45];
+
+            var address = ['Digital Edify', '101H', '102', 'Cyber Towers', 'Hyderabad', 'Madhapur' ];
+
+            var brands = ['Apple','Google','MOTOROLA', 'vivo'];
+
+            var productInfo = ['Samsung Galaxy A35 5G (Awesome Lilac, 256 GB)  (8 GB RAM)', 20999,4.4, 63615];
+
+            var specifications = [
+                '8 GB RAM | 256 GB ROM | Expandable Upto 1 TB',
+                '16.76 cm (6.6 inch) Full HD+ Display',
+                '50MP + 8MP + 5MP | 13MP Front Camera',
+                '5000 mAh Battery',
+                'Exynos 1380 Processor'
+            ];
+
+            var matrix = [
+                [1,2],
+                [4,5]
+            ];
+
+            console.log(matrix[0][0]);
+
+            const config = [
+                ['Apple','Google','MOTOROLA','vivo'],
+                ['50% or more','40% or more','30% or more']
+            ]
+
+            var address = {
+                flatNo: 105,
+                apartmentName: 'Digital Edify',
+                area: 'Madhapur',
+                city: 'Hyderabad',
+                pincode: 500001
+            }
+
+            console.log(address.city);
+
+            address.area = 'Hitech City';
+
+            console.log(address.area);
+
+            var userInfo = {
+                id:1,
+                firstName: "John",
+                lastName: "Doe",
+                email:"john.doe@gmail.com",
+                username: "johndoe123",
+                age: 28,
+                isActive: true,
+                address:{
+                    street: "123 Main St",
+                    city:"New York",
+                    state: "NY",
+                    zip: "10001"
+                },
+                phoneNumbers: ["+1-123-456-7890", "+1-987-654-3210"]
+            };
+
+            console.log(userInfo.address.street);
+
+            console.log(userInfo.phoneNumbers[1]);
+
+            document.getElementById("userInfo").innerHTML = userInfo.firstName;
+            
+        </script>
+        
+    </body>
+</html>

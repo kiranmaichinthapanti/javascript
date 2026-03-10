@@ -1,0 +1,579 @@
+{
+  "users": [
+    {
+      "email": "aarav.sharma@example.com",
+      "password": "$2a$10$ivkltvLey5Fu0GBCfEVEH7fZkPu.tCen8Q0bNqXvVvxlbCUZ",
+      "name": "Aarav Sharma",
+      "age": 25,
+      "createdAt": "2025-12-09T10:00:00Z",
+      "id": 1
+    },
+    {
+      "email": "riya.verma@example.com",
+      "password": "$2a$10$AbCdEfGhIjKlMnOpQrStUvWxYz1234567890abcd",
+      "name": "Riya Verma",
+      "age": 23,
+      "createdAt": "2025-12-09T10:05:00Z",
+      "id": 2
+    },
+    {
+      "email": "vivaan.reddy@example.com",
+      "password": "$2a$10$XyZaBcDeFgHiJkLmNoPqRsTuVw9876543210abcd",
+      "name": "Vivaan Reddy",
+      "age": 28,
+      "createdAt": "2025-12-09T10:10:00Z",
+      "id": 3
+    },
+    {
+      "email": "ananya.nair@example.com",
+      "password": "$2a$10$LmNoPqRsTuVwXyZaBcDeFgHiJk1234567890abcd",
+      "name": "Ananya Nair",
+      "age": 24,
+      "createdAt": "2025-12-09T10:15:00Z",
+      "id": 4
+    },
+    {
+      "email": "ishaan.patel@example.com",
+      "password": "$2a$10$GhIjKlMnOpQrStUvWxYzAbCdEf1234567890abcd",
+      "name": "Ishaan Patel",
+      "age": 27,
+      "createdAt": "2025-12-09T10:20:00Z",
+      "id": 5
+    },
+    {
+      "email": "kiranmaichinthapanti98@gmail.com",
+      "password": "$2a$10$eaesy4I32U0hmCvhQtNU8OKzSQfXIbt7kjKfgPwVvnDWR1v9D8FyC",
+      "fullName": "Kiranmai Chinthapanti",
+      "mobileNo": "8942123447",
+      "id": 6
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$yiIIwLK0In/.uRAiyzV3C.Ao8yfYIh3IbUuzDm4opEEBk7OI3JQCG",
+      "fullName": "Rajitha golla",
+      "mobileNo": "8942123447",
+      "id": 8
+    }
+  ],
+  "employees": [
+    {
+      "name": "Kiranmai",
+      "department": "IT",
+      "salary": "55000",
+      "isPermanent": "true",
+      "id": 101
+    },
+    {
+      "id": 102,
+      "name": "sravani",
+      "department": "Devops",
+      "salary": 42000,
+      "isPermanent": false
+    },
+    {
+      "name": "Abhilash",
+      "department": "QA",
+      "salary": 100000,
+      "isPermanent": true,
+      "id": 104
+    },
+    {
+      "name": "suprathika",
+      "department": "medical coding",
+      "salary": "34000",
+      "isPermanent": "true",
+      "id": 105
+    }
+  ],
+  "orders": [
+    {
+      "id": 201,
+      "userId": 1,
+      "product": "Laptop",
+      "amount": 75000,
+      "status": "Delivered"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 16 (Black, 128 GB)",
+      "specifications": [
+        "128 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "48MP + 12MP | 12MP Front Camera",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 82900,
+      "discount": 21,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/q/h/-original-imahgfmzjj8gtqbc.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "vivo X200T (Stellar Black, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "48MP + 12MP | 12MP Front Camera",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 59999,
+      "discount": 25,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/u/q/r/-original-imahjzxknyum2hqe.jpeg?q=70",
+      "inStock": false
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy F07 (Green, 64 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 64499,
+      "discount": 25,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/v/m/4/-original-imahgacf8wvads6f.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 4,
+      "name": "realme P4 Power 5G (TransSilver, 128 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 107499,
+      "discount": 25,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/r/a/c/-original-imahjzf6gw6zwskp.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 5,
+      "name": "OPPO K13x 5G 6000mAh and 45W SUPERVOOC Charger & AI (Breeze Blue, 128 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 327499,
+      "discount": 25,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/6/a/9/-original-imahfw4vxaqmcsjp.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 6,
+      "name": "OnePlus Nord CE5 5G (Black Infinity, 128 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 79499,
+      "discount": 25,
+      "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/t/y/0/-original-imahgkgxk7yztxkg.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 7,
+      "name": "Google Pixel 10 (Frost, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "15.49 cm (6.1 inch) Super Retina XDR Display",
+        "A18 Chip, 6 Core Processor Processor",
+        "1 year warranty for phone and 1 year warranty for in Box Accessories."
+      ],
+      "price": 80000,
+      "discount": 25,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/p/e/2/-original-imahfjsfgu7vjkvw.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 8,
+      "name": "iQOO Neo 9 Pro 5G (Fiery Red, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "17.22 cm (6.78 inch) AMOLED Display",
+        "50MP + 8MP | 16MP Front Camera",
+        "Snapdragon 8 Gen 2 Processor",
+        "5160 mAh Battery | 120W Fast Charging"
+      ],
+      "price": 35999,
+      "discount": 18,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/5/6/x/neo9-pro-i2304-iqoo-original-imagyp3st8jdutfb.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 9,
+      "name": "Xiaomi 14 5G (Jade Green, 512 GB)",
+      "specifications": [
+        "12 GB RAM | 512 GB ROM",
+        "16.36 cm (6.44 inch) AMOLED Display",
+        "50MP Triple Camera | 32MP Front Camera",
+        "Snapdragon 8 Gen 3 Processor",
+        "4610 mAh Battery | 90W Fast Charging"
+      ],
+      "price": 69999,
+      "discount": 12,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/z/2/z/-original-imahfpwv6yzawcuc.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 10,
+      "name": "Motorola Edge 50 Pro 5G (Luxe Lavender, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "16.94 cm (6.67 inch) pOLED Display",
+        "50MP + 13MP + 10MP | 50MP Front Camera",
+        "Snapdragon 7 Gen 3 Processor",
+        "4500 mAh Battery | 125W Turbo Charging"
+      ],
+      "price": 41999,
+      "discount": 20,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/i/n/-original-imagzhspjy5g8nh3.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 11,
+      "name": "Nothing Phone 2a 5G (Milk, 128 GB)",
+      "specifications": [
+        "8 GB RAM | 128 GB ROM",
+        "17.02 cm (6.7 inch) AMOLED Display",
+        "50MP + 50MP | 32MP Front Camera",
+        "Dimensity 7200 Pro Processor",
+        "5000 mAh Battery | 45W Fast Charging"
+      ],
+      "price": 23999,
+      "discount": 15,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/3/n/p/-original-imahcfcfwzp8sydh.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 12,
+      "name": "Redmi Note 13 Pro 5G (Arctic White, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "16.94 cm (6.67 inch) AMOLED Display",
+        "200MP + 8MP + 2MP | 16MP Front Camera",
+        "Snapdragon 7s Gen 2 Processor",
+        "5100 mAh Battery | 67W Fast Charging"
+      ],
+      "price": 27999,
+      "discount": 17,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/p/8/i/-original-imagwu89u7fgsq4b.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 13,
+      "name": "Honor Magic5 Pro 5G (Titanium Silver, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "17.02 cm (6.7 inch) AMOLED Display",
+        "50MP + 50MP + 50MP | 50MP Front Camera",
+        "Snapdragon 8 Gen 1 Processor",
+        "5100 mAh Battery | 66W Fast Charging"
+      ],
+      "price": 57999,
+      "discount": 22,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/4/p/x/x9c-5g-x9c-5g-honor-original-imahe9zqecy4n8tk.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 14,
+      "name": "Sony Xperia 10 V (Black, 128 GB)",
+      "specifications": [
+        "8 GB RAM | 128 GB ROM",
+        "15.24 cm (6.0 inch) OLED Display",
+        "12MP + 8MP + 8MP | 8MP Front Camera",
+        "Snapdragon 695 Processor",
+        "5000 mAh Battery | 30W Fast Charging"
+      ],
+      "price": 33999,
+      "discount": 10,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/j12gakw0/mobile/q/z/z/sony-xperia-xzs-g8232-original-imaeskq9nvtkz6z3.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 15,
+      "name": "Tecno Phantom X2 (Stardust Gold, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "17.27 cm (6.8 inch) AMOLED Display",
+        "50MP + 50MP | 32MP Front Camera",
+        "Dimensity 9000 Processor",
+        "5160 mAh Battery | 45W Fast Charging"
+      ],
+      "price": 44999,
+      "discount": 15,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/h/v/d/phantom-x2-5g-dual-curved-amoled-display-ad8-tecno-original-imahyg3fadwcznxh.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 16,
+      "name": "Infinix Zero Ultra 5G (Turbo Black, 256 GB)",
+      "specifications": [
+        "12 GB RAM | 256 GB ROM",
+        "17.27 cm (6.8 inch) AMOLED Display",
+        "200MP Triple Camera | 32MP Front Camera",
+        "Dimensity 920 Processor",
+        "5000 mAh Battery | 180W Fast Charging"
+      ],
+      "price": 31999,
+      "discount": 19,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/t/7/j/-original-imagmhszyfsbqfth.jpeg?q=70",
+      "inStock": true
+    },
+    {
+      "id": 17,
+      "name": "Vivo Y200 (Starry Blue, 128 GB)",
+      "specifications": [
+        "8 GB RAM | 128 GB ROM",
+        "16.51 cm (6.5 inch) AMOLED Display",
+        "64MP + 2MP | 16MP Front Camera",
+        "Dimensity 7020 Processor",
+        "5000 mAh Battery | 44W Fast Charging"
+      ],
+      "price": 21999,
+      "discount": 12,
+      "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/z/s/j/-original-imagybzbuxhqpkha.jpeg?q=70",
+      "inStock": true
+    }
+  ],
+  "cars": [
+    {
+      "brand": "Tata",
+      "model": "Nexon",
+      "year": "2029",
+      "price": "1800000",
+      "image": "data:image/jpeg;base64,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",
+      "id": 404
+    },
+    {
+      "id": 405,
+      "image": "data:image/jpeg;base64,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",
+      "brand": "Kia",
+      "model": "Seltos",
+      "year": 2023,
+      "price": 1550000,
+      "createdAt": "2026-01-12T12:45:00Z"
+    },
+    {
+      "brand": "Toyota",
+      "model": "Innova Crysta",
+      "year": "2021",
+      "price": "2150000",
+      "image": "data:image/jpeg;base64,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",
+      "id": 406
+    }
+  ],
+  "appointments": [
+    {
+      "id": 501,
+      "patientName": "Ramesh",
+      "doctorId": 1,
+      "date": "2026-01-10",
+      "time": "10:30 AM"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dr. Sunil",
+      "specialization": "Cardiology",
+      "experience": 12
+    },
+    {
+      "id": 2,
+      "name": "Dr. Meena",
+      "specialization": "Dermatology",
+      "experience": 8
+    }
+  ],
+  "tickets": [
+    {
+      "id": 601,
+      "customerName": "Arjun",
+      "issue": "Login not working",
+      "status": "Open",
+      "priority": "High"
+    }
+  ],
+  "groceries": [
+    {
+      "id": 1,
+      "name": "Rice",
+      "category": "Grains",
+      "price": 60,
+      "unit": "kg",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Wheat Flour",
+      "category": "Grains",
+      "price": 80,
+      "unit": "kg",
+      "inStock": true
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "products": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 16 (Black, 128 GB)",
+          "specifications": [
+            "128 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "48MP + 12MP | 12MP Front Camera",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories."
+          ],
+          "price": 82900,
+          "discount": 21,
+          "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/q/h/-original-imahgfmzjj8gtqbc.jpeg?q=70",
+          "quantity": 3
+        },
+        {
+          "id": 5,
+          "name": "OnePlus Nord CE5 5G (Black Infinity, 128 GB)",
+          "specifications": [
+            "12 GB RAM | 256 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories."
+          ],
+          "price": 79499,
+          "discount": 25,
+          "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/t/y/0/-original-imahgkgxk7yztxkg.jpeg?q=70",
+          "quantity": 3
+        }
+      ],
+      "totalAmount": 125115.25
+    },
+    {
+      "id": 2,
+      "userId": 9,
+      "products": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 16 (Black, 128 GB)",
+          "specifications": [
+            "128 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "48MP + 12MP | 12MP Front Camera",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories."
+          ],
+          "price": 82900,
+          "discount": 21,
+          "imageUrl": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/n/q/h/-original-imahgfmzjj8gtqbc.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 59624.25
+    },
+    {
+      "id": 3,
+      "userId": 10,
+      "products": [
+        {
+          "id": 5,
+          "name": "OnePlus Nord CE5 5G (Black Infinity, 128 GB)",
+          "specifications": [
+            "12 GB RAM | 256 GB ROM",
+            "15.49 cm (6.1 inch) Super Retina XDR Display",
+            "A18 Chip, 6 Core Processor Processor",
+            "1 year warranty for phone and 1 year warranty for in Box Accessories."
+          ],
+          "price": 79499,
+          "discount": 25,
+          "imageUrl": "https://rukminim2.flixcart.com/image/612/612/xif0q/mobile/t/y/0/-original-imahgkgxk7yztxkg.jpeg?q=70",
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 65491
+    }
+  ],
+  "voters": [
+    {
+      "voterId": "V101",
+      "name": "Rahul Sharma",
+      "age": 28,
+      "city": "Hyderabad",
+      "hasVoted": false
+    },
+    {
+      "voterId": "V102",
+      "name": "Priya Reddy",
+      "age": 34,
+      "city": "Warangal",
+      "hasVoted": true
+    },
+    {
+      "voterId": "V103",
+      "name": "Arjun Kumar",
+      "age": 22,
+      "city": "Karimnagar",
+      "hasVoted": false
+    },
+    {
+      "voterId": "V104",
+      "name": "Sneha Patel",
+      "age": 41,
+      "city": "Nizamabad",
+      "hasVoted": true
+    },
+    {
+      "voterId": "V105",
+      "name": "Vikram Singh",
+      "age": 30,
+      "city": "Khammam",
+      "hasVoted": false
+    },
+    {
+      "voterId": "V106",
+      "name": "Anjali Verma",
+      "age": 26,
+      "city": "Adilabad",
+      "hasVoted": true
+    },
+    {
+      "voterId": "V107",
+      "name": "Karthik Rao",
+      "age": 37,
+      "city": "Mahbubnagar",
+      "hasVoted": false
+    },
+    {
+      "voterId": "V108",
+      "name": "Divya Nair",
+      "age": 29,
+      "city": "Siddipet",
+      "hasVoted": true
+    },
+    {
+      "voterId": "V109",
+      "name": "Manoj Gupta",
+      "age": 45,
+      "city": "Medak",
+      "hasVoted": false
+    },
+    {
+      "voterId": "V110",
+      "name": "Pooja Mehta",
+      "age": 31,
+      "city": "Sangareddy",
+      "hasVoted": true
+    }
+  ]
+}

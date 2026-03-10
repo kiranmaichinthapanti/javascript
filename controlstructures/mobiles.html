@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        h1{
+            font-weight: bold;
+            text-align: center;
+        }
+        .products{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background-color: #fff;
+        }
+
+        .product img{
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .title{
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .rating{
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .price{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .mrp{
+            font-size: 12px;
+            color: gray;
+        }
+
+        .mrp span{
+            text-decoration: line-through;
+        }
+
+        .prime{
+            color: #00a8e1;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Mobile Accersories</h1>
+    <div class="products" id="products">
+        
+    </div>
+
+    <script>
+        var mobiles= [
+            {
+                model: "REDMI 15C 5G Midnight Black 4GB + 128GB | Royale Design",
+                price: 12499,
+                mrp: 14999,
+                rating: 3.8,
+                reviews: 73,
+                prime: true,
+                image: "https://m.media-amazon.com/images/I/71hOqmhz9RL._AC_SX208_CB1169409_QL70_.jpg"
+            },
+            {
+                model: "Samsung Galaxy M34 5G 6GB + 128GB | Blue",
+                price: 16999,
+                mrp: 19999,
+                rating: 4.1,
+                reviews: 214,
+                prime: true,
+                image: "https://m.media-amazon.com/images/I/610lbucItmL._AC_UY218_.jpg"
+            },
+            {
+                model: "Realme Narzo 60 5G 8GB + 128GB | Mars Orange",
+                price: 17999,
+                mrp: 21999,
+                rating: 4.0,
+                reviews: 156,
+                prime: false,
+                image: "https://m.media-amazon.com/images/I/61RWG+THTuL._AC_UY218_.jpg"
+            },
+            {
+                model: "iQOO Z7 5G 6GB + 128GB | Norway Blue",
+                price: 15499,
+                mrp: 18999,
+                rating: 4.2,
+                reviews: 98,
+                prime: true,
+                image: "https://m.media-amazon.com/images/I/61JS7lF2aqL._SX679_.jpg"
+            },
+            {
+                model: "OnePlus Nord CE 3 Lite 5G 8GB + 128GB | Pastel Lime",
+                price: 19999,
+                mrp: 23999,
+                rating: 4.3,
+                reviews: 312,
+                prime: true,
+                image: "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg"
+            },
+            {
+                model: "Vivo T2 5G 6GB + 128GB | Nitro Blaze",
+                price: 15999,
+                mrp: 19999,
+                rating: 4.1,
+                reviews: 184,
+                prime: false,
+                image: "https://m.media-amazon.com/images/I/71nhTcpgx2L._AC_UL320_.jpg"
+            }
+        ];
+
+        var productsDIv= document.getElementById('products');
+
+        mobiles.forEach(function(mobile) {
+            productsDIv.innerHTML += `
+
+                <div class="product">
+                    <img src="${mobile.image}" alt="Redmi">
+                    <div class="details">
+                        <div class="title">
+                            ${mobile.model}
+                        </div>
+
+                        <div class="rating">
+                            ★★★★☆ <span>${mobile.rating}</span>
+                        </div>
+                        <div class="price">${mobile.price}</div>
+
+                        <div class="mrp">
+                            M.R.P: <span>${mobile.mrp}</span>
+                        </div>
+
+                        <div class="prime">${mobile.prime}</div>
+                    </div>
+
+                </div>
+            
+            `;
+        })
+    </script>
+</body>
+</html>

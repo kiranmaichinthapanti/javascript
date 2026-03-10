@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            var mobiles = [
+                "iphone 14",
+                "Samsung Galaxy s23",
+                "Google pixel 8",
+                "Oneplus 12",
+                "Xiomi Redmi Note 14",
+                "Realme GT 8"
+            ];
+
+            mobiles.push("Oppo Find X8");
+
+            mobiles.push("Sony Xperia");
+
+            mobiles.pop();
+
+            mobiles.pop();
+
+            mobiles.pop();
+
+            // mobiles.splice(1,2);
+
+            mobiles.splice(1,0,'Sony Xperia');
+
+            mobiles.splice(0,0,'nokia',"ipod");
+
+            console.log(mobiles);
+
+            var moreMobile = [
+                "Vivo X100",
+                "Oppo Reno 11",
+                "Motorola Edge 40",
+                "Nothing Phone 2",
+                "Asus ROG Phone 7",
+                "iQOO Neo 9"
+            ];
+
+            var moreMobiles2 = [
+                "OnePlus 12",
+                "Xiaomi Redmi Note 13",
+                "Xiaomi Redmi Note 14"
+            ];
+
+            var allMobiles = mobiles.concat(moreMobile, moreMobiles2);
+
+            console.log('All mobiles', allMobiles);
+
+            var sortedMobiles = mobiles.sort().reverse();
+
+            console.log(sortedMobiles);
+
+            var isMobileAvailable = mobiles.includes("Sony Xperia");
+
+            console.log("Is Mobile Availabe: ", isMobileAvailable);
+        </script>
+        
+    </body>
+</html>
