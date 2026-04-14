@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lanumg="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a program to check if a number is even or odd.
+        var num = Number(prompt("Enter number: "));
+        if(num%2 === 0){
+            console.log(num + " is even")
+        } else {
+            console.log(num + " is odd")
+        }
+
+        // Check if a number is positive, negative, or zero.
+        var n = Number(prompt("Enter number: "));
+        if (n > 0){
+            console.log(n + "is positive");
+        } else if (n<0){
+            console.log(n + " is negative");
+        } else {
+            console.log(n + " is zero");
+        }
+
+        // Largest of 3 Numbers
+        let a = Number(prompt("Enter first number:"));
+        let b = Number(prompt("Enter second number:"));
+        let c = Number(prompt("Enter third number: "));
+
+        if (a>=b && a>=c) {
+            console.log(a+ "is largest number");
+        } else if(b>=a && b>=c) {
+            console.log(b+ " is largest number");
+        } else {
+            console.log(c+ " is largest number");
+        }
+
+        // Write a program to check if a person is eligible to vote (age ≥ 18).
+        let age = Number(prompt("Enter age: "));
+        if (age >= 18){
+            console.log("Eligible for vote");
+        }else {
+            console.log("Not Eligible for vote");
+        }
+    </script>
+</body>
+</html>

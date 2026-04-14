@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a function to: Add two numbers Return Result
+        function addition(n1,n2){
+            var result = n1 + n2;
+            return result;
+        }
+
+        console.log(addition(10,20));
+
+        // Write a function to check prime number
+        function isPrime(num1){
+            if(num1 <= 1){
+                return "Not Prime";
+            }
+
+            for (let i = 2; i < num1; i++) {
+                if (num1 % i === 0) {
+                    return "Not Prime";
+                }
+            }
+
+            return "Prime";
+        }
+
+        let num2 = Number(prompt("Enter Number:"));
+        console.log(isPrime(num2));
+        
+        // Create a function to find factorial.
+        function factorial(value){
+            let fact = 1;
+
+            for (let i = 1; i <= value; i++){
+                fact = fact * i;
+            }
+            return fact;
+        }
+
+        let value2 = Number(prompt("Enter Number"));
+        console.log("Factorial of number: ", factorial(value2));
+
+        // Write a function using arrow syntax
+        const add = (c,d) => c+d;
+        console.log(add(2,3));
+
+    </script>
+</body>
+</html>
